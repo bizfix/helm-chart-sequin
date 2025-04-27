@@ -24,7 +24,7 @@ ingress:
   annotations: {}
   tls:
     enabled: false
-    hosts: ["*.staging.bizfixlab.com"]
+    hosts: ['*.staging.bizfixlab.com']
     secretName: ""
 
 postgres:
