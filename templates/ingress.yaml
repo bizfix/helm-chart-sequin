@@ -19,10 +19,10 @@ spec:
                 name: {{ .Release.Name }}-sequin
                 port:
                   number: {{ .Values.sequin.service.port }}
-  {{- with .Values.ingress.tls }}
+  {{- if and .Values.ingress.tls.enabled .Values.ingress.tls.secretName }}
   tls:
     - hosts:
-        - {{ $.Values.ingress.host }}
-      secretName: {{ .secretName }}
+        - {{ .Values.ingress.host }}
+      secretName: {{ .Values.ingress.tls.secretName }}
   {{- end }}
 {{- end }}
