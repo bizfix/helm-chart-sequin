@@ -21,7 +21,8 @@ sequin:
 ingress:
   enabled: false
   host: sequin.local
-  annotations: {}
+  annotations:
+    cert-manager.io/cluster-issuer: wildcard-issuer
   tls:
     enabled: false
     secretName: ""
