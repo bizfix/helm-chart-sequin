@@ -22,7 +22,7 @@ spec:
   {{- if and .Values.ingress.tls.enabled .Values.ingress.tls.secretName }}
   tls:
     - hosts:
-        - "*.staging.bizfixlab.com"
+        - {{ .Values.ingress.host }}
       secretName: {{ .Values.ingress.tls.secretName }}
   {{- end }}
 {{- end }}
