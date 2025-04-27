@@ -18,6 +18,12 @@ sequin:
     vaultKey: "2Sig69bIpuSm2kv0VQfDekET2qy8qUZGI8v3/h3ASiY="
     redisUrl: "redis://sequin-redis:6379"
 
+ingress:
+  enabled: false
+  host: sequin.local
+  annotations: {}
+  tls: []
+
 postgres:
   image:
     repository: postgres
